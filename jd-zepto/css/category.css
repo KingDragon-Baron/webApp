@@ -1,0 +1,169 @@
+/* 定义全局变量 */
+/* 公共的样式放到base.less里面 */
+* {
+  margin: 0px;
+  padding: 0px;
+  /* 防止边框padding超出页面宽度出现滚动条 */
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+a {
+  color: #666;
+  text-decoration: none;
+  /*一般移动端清除a的点击高亮  透明就表示去掉*/
+  -webkit-tap-highlight-color: transparent;
+}
+input {
+  border: none;
+  outline: none;
+  /*清除移动端默认的表单样式*/
+  -webkit-appearance: none;
+}
+img {
+  /* 解决图片3px的间距 */
+  vertical-align: middle;
+}
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.layout {
+  /* 最大640px */
+  max-width: 640px;
+  /*  居中显示 */
+  margin: 0px auto;
+  background-color: #f5f5f5;
+  /* 共用header部分*/
+  /* 共用footer部分*/
+}
+.layout [class^='icon-'],
+.layout [class*=' icon-'] {
+  background-image: url('../images/sprites.png');
+  background-size: 200px 200px;
+  background-origin: content-box;
+  background-clip: content-box;
+}
+.layout #header {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.layout #header .search {
+  flex: 1;
+  height: 30px;
+  position: relative;
+}
+.layout #header .search .icon-search {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-position: -60px -108px;
+  position: absolute;
+  top: 5px;
+  left: 8px;
+}
+.layout #header .search input {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  padding-left: 30px;
+}
+.layout #footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 999;
+}
+.layout #footer ul {
+  display: flex;
+  justify-content: space-around;
+}
+.layout #footer ul li a img {
+  width: 65px;
+  height: 50px;
+}
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+.layout {
+  height: 100%;
+}
+/* header part*/
+#header {
+  background-color: #f5f5f5;
+}
+#header .icon-back {
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  background-position: -20px 0;
+}
+#header .icon-menu {
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  background-position: -60px 0;
+}
+/* category part*/
+#category {
+  padding-top: 40px;
+  padding-bottom: 50px;
+  display: flex;
+  overflow: hidden;
+  height: 100%;
+}
+#category .category-left {
+  height: 100%;
+}
+#category .category-left .swiper-container {
+  height: 100%;
+}
+#category .category-left .swiper-container .swiper-slide {
+  height: auto;
+}
+#category .category-left .swiper-container .swiper-slide ul li.active a {
+  color: #de181b;
+}
+#category .category-left .swiper-container .swiper-slide ul li a {
+  width: 86px;
+  line-height: 46px;
+  display: block;
+  text-align: center;
+}
+#category .category-right {
+  padding: 10px;
+  background-color: #fff;
+  height: 100%;
+  flex: 1;
+}
+#category .category-right .swiper-container {
+  height: 100%;
+}
+#category .category-right .swiper-container .swiper-slide {
+  height: auto;
+}
+#category .category-right .swiper-container .swiper-slide #branchList .jd-brand .jd-category-style-1 {
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+#category .category-right .swiper-container .swiper-slide #branchList .jd-brand .jd-category-style-1 li {
+  width: 33.333%;
+}
+#category .category-right .swiper-container .swiper-slide #branchList .jd-brand .jd-category-style-1 li a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#category .category-right .swiper-container .swiper-slide #branchList .jd-brand .jd-category-style-1 li a img {
+  width: 70px;
+  height: 70px;
+}

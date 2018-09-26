@@ -1,0 +1,274 @@
+@import 'base.less';
+
+/* 头部区域*/
+
+#header {
+    height: 35px;
+    background-color: rgba(222, 24, 27, 0);
+    .icon-logo {
+        width: 80px;
+        height: 30px;
+        padding: 0 10px;
+        background-position: 0 -105px;
+    }
+    .login {
+        width: 50px;
+        line-height: 35px;
+        text-align: center;
+        color: #fff;
+        font-size: 14px;
+    }
+}
+
+/* 轮播图区域*/
+
+#banner {
+    position: relative;
+    #banner-swiper {
+        .swiper-wrapper {
+            .swiper-slide {
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    #banner-pagination {
+        position: absolute;
+        bottom: 6px;
+        left: 50%;
+        transform: translateX(-50%);
+        span.swiper-pagination-bullet {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            margin-right: 8px;
+            background-color: transparent;
+            opacity: 1;
+            border: 1px solid #fff;
+            &.swiper-pagination-bullet-active {
+                background-color: #fff;
+            }
+        }
+    }
+}
+
+/* prducts part*/
+
+#products {
+    background-color: #fff;
+    ul {
+        li {
+            float: left;
+            width: 25%;
+            text-align: center;
+            a {
+                img {
+                    width: 40px;
+                    height: 40px;
+                    margin-top: 10px;
+                }
+                p {
+                    margin-top: 10px;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+/* main part*/
+#main {
+    // padding: 10px;
+    padding: 10px 10px 60px;
+    /* seckill part*/
+    #seckill {
+        background-color: #fff;
+        margin-top: 10px;
+        box-shadow: 0 0 2px 0 #ccc;
+        .seckill-title {
+            .clock {
+                margin-left: 5px;
+                width: 20px;
+                height: 25px;
+                float: left;
+            }
+            p {
+                font-size: 14px;
+                color: @main-color;
+                float: left;
+                line-height: 30px;
+                padding: 0 10px;
+            }
+            .seckill-time {
+                margin-top: 5px;
+                float: left;
+                span {
+                    background-color: #000;
+                    color: #fff;
+                    padding: 0 3px;
+                    &:nth-child(3n) {
+                        background-color: #fff;
+                        color: #000;
+                    }
+                }
+            }
+            .more {
+                float: right;
+                line-height: 30px;
+                font-size: 14px;
+            }
+        }
+        .seckill-content {
+            padding: 10px 0;
+            ul {
+                display: flex;
+                li {
+                    flex: 1;
+                    border-right: 1px solid #ccc;
+                    &:last-child {
+                        border-right: none;
+                    }
+                    a {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        img {
+                            width: 100%;
+                        }
+                        p {
+                            span {
+                                color: @main-color;
+                                font-size: 12px;
+                            }
+                            del {
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #market {
+        background-color: #fff;
+        margin-top: 10px;
+        box-shadow: 0 0 2px 0 #ccc;
+        .market-title {
+            border-bottom: 1px solid #ccc;
+            h4 {
+                font-weight: normal;
+                position: relative;
+                padding-left: 20px;
+                line-height: 30px;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 8px;
+                    left: 12px;
+                    width: 4px;
+                    height: 14px;
+                    background-color: @main-color;
+                }
+            }
+        }
+        .market-content {
+            .left {
+                width: 50%;
+                float: left;
+                img {
+                    width: 100%;
+                }
+            }
+            .right {
+                width: 50%;
+                float: left;
+                a {
+                    img {
+                        box-sizing: border-box;
+                        width: 100%;
+                        border-left: 1px solid #ccc;
+                        border-bottom: 1px solid #ccc;
+                    }
+                    &:last-child {
+                        img {
+                            border-bottom: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #hot {
+        background-color: #fff;
+        margin-top: 10px;
+        box-shadow: 0 0 2px 0 #ccc;
+        .hot-title {
+            border-bottom: 1px solid #ccc;
+            h4 {
+                font-weight: normal;
+                position: relative;
+                padding-left: 20px;
+                line-height: 30px;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 8px;
+                    left: 12px;
+                    width: 4px;
+                    height: 14px;
+                    background-color: @main-color;
+                }
+            }
+        }
+        .hot-content {
+            .right {
+                width: 50%;
+                float: left;
+                img {
+                    width: 100%;
+                }
+            }
+            .left {
+                width: 50%;
+                float: left;
+                a {
+                    img {
+                        box-sizing: border-box;
+                        width: 100%;
+                        border-right: 1px solid #ccc;
+                        border-bottom: 1px solid #ccc;
+                    }
+                    &:last-child {
+                        img {
+                            border-bottom: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* footer part*/
+
+#footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #fff;
+    ul {
+        display: flex;
+        justify-content: space-around;
+        li {
+            a {
+                img {
+                    width: 65px;
+                    height: 50px;
+                }
+            }
+        }
+    }
+}
+
